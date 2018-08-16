@@ -1,0 +1,24 @@
+{
+  "name": "04-data-modeling-and-binary",
+  "version": "1.0.0",
+  "description": "* Work in a fork of this repository\r * Work in a branch on your fork\r * Open a pull request to this repository\r * Submit on canvas a question and observation, how long you spent, and a link to your pull request",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RebelFlesh/04-data-modeling-and-binary.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RebelFlesh/04-data-modeling-and-binary/issues"
+  },
+  "homepage": "https://github.com/RebelFlesh/04-data-modeling-and-binary#readme",
+  "devDependencies": {
+    "eslint": "^5.3.0",
+    "jest": "^23.5.0"
+  }
+}
