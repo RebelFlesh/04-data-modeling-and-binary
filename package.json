@@ -4,7 +4,8 @@
   "description": "* Work in a fork of this repository\r * Work in a branch on your fork\r * Open a pull request to this repository\r * Submit on canvas a question and observation, how long you spent, and a link to your pull request",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "eslint .",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
