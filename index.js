@@ -2,8 +2,8 @@
 
 
 const Bitmap = require('./lib/bitmap');
-const requrieAll = requrieAll('requrie-all');
-const transformLibrary = requrieAll(`${__dirname}/lib/transfomrs`);
+const requireAll = require('require-all');
+const transformLibrary = requireAll(`${__dirname}/lib/transforms`);
 console.log(transformLibrary);
 
 const [/*ignored*/, /*ignored*/, inFile, outFile, ...transformNames] = process.argv;
