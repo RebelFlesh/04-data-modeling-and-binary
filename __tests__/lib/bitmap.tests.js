@@ -23,11 +23,36 @@ describe('Bitmap', ()=>{
       expect(bmp.palette.length).toBe(1024);
     });
 
-    it('can write a new bmp file', ()=>{
+    it('can read a bitmap asynchronously', done =>{
+      Bitmap.fromFileAsync(fileHouse,(err,bmp)=>{
+        if(err) throw err;
+
+        expect(bmp.type).toBe('BM');
+        done();
+      });
+    });
+    
+    afterEach(done=>{
+      fs.unlink(fileHouseOutput,err => {
+        done();
+      });
+    });    
+
+    it('can write a new bmp file synchronously', ()=>{
       var bmp = Bitmap.fromFile(fileHouse);
-      bmp.writeToFile(fileHouseOutput);
+      bmp.writeToFileSync(fileHouseOutput);
 
       expect(fs.existsSync(fileHouseOutput)).toBe(true);
+    });
+
+    it('can wrtie a new bmp file asynchronously',(done)=>{
+      var bmp = Bitmap.fromFile(fileHouse);
+      bmp.writeToFileAsync(fileHouseOutput,(err)=>{
+        if (err) throw err;
+        var written = Bitmap.fromFile(fileHouseOutput);
+        expect.anything(written);
+        done();
+      });
     });
   });
 });
