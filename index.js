@@ -32,4 +32,4 @@ transformNames.forEach(transformName =>{
 });
 
 //adds file to the outfile
-bmp.writeToFile(outFile);
+bmp.writeToFileSync(outFile);
