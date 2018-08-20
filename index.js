@@ -12,9 +12,9 @@ console.log({inFile, outFile, transformNames});
 //creates bmp object instance from infile
 var bmp = Bitmap.fromFile(inFile);
 
-// Manual transform
-const invert = require('./lib/transforms/invert-palette');
-invert(bmp);
+// Manual transform: Example invert
+// const invert = require('./lib/transforms/invert-palette');
+// invert(bmp);
 
 //loops through our transforms calling them automatically
 transformNames.forEach(transformName =>{
